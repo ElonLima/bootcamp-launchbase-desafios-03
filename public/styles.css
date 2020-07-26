@@ -1,0 +1,220 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body { 
+    background: rgb(22, 28, 78);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+}
+
+header {
+    padding: 30px;
+    background: rgba( 0, 0, 0, 0.1);
+    
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 40px auto 40px;
+    text-align: center;
+}
+
+#wrapper img {
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 300px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    border: solid 7px rgba(0, 0, 0, 0.3);
+
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 2;
+}
+
+#wrapper h3 {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 2;
+}
+
+#wrapper p {
+    max-width: 500px;
+    margin: 32px auto auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#wrapper p a {
+    color:var(--color-green);
+}
+
+#links_header :hover, #links_footer :hover {
+    color: rgb(0, 255, 157);
+    transition: 200ms;
+    text-decoration: underline;
+}
+
+#links_footer { 
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#tech-icons {
+    margin-top: 20px;
+}
+
+#tech-icons img {
+    border-radius: 0px;
+    border: none;
+    max-width: 170px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ============= CARDS ================ */
+
+.cards {
+    width: 90%;
+    max-width: 50vw;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: center;
+    
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2); ;
+    border-radius: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    border: 2px solid white;
+}
+
+.card__image-container {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    margin: 105px 0px 55px;  
+}
+
+.card__image-container img {
+    align-items: center;
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+    text-align: center;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.card__price {
+    filter: brightness(90%);
+    border-radius: 20px;
+    text-align: center;
+}
+
+/*============= MODAL ===========*/
+
+.modal-overlay {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .maximize-modal {
+    color: black;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+}
+
+/* ========= MODAL ACTIVE =====*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
