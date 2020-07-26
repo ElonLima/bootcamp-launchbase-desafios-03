@@ -149,3 +149,13 @@ li {
 .tech-name {
     text-align: center;
 }
+
+.notFound {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#notFound {
+    width: 550px;
+}
