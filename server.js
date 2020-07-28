@@ -3,8 +3,9 @@ const express = require('express')
 // Para iniciar o nunjucks
 const nunjucks = require('nunjucks')
 
-// Executando a variável "express" como função e guardando dentro da variável "server"  
+// Executando a variável "express" como função e guardando dentro da variável "server"
 const server = express()
+const cards = require('./data')
 
 // Configurando o estilo
 server.use(express.static("public"))
@@ -16,13 +17,13 @@ server.use(express.static("assets"))
 server.set("view engine", "njk")
 // Configurando o nunjucks
 nunjucks.configure("views", { 
-    express: server
+    express: server,
+    autoescape: false
 })
 
 //adicionando rotas
-
 server.get("/", function(req, res) {
-    return res.render("courses")
+    return res.render("courses", {items: cards})
 })
 
 server.get("/about", function(req, res) {

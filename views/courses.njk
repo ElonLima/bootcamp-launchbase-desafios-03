@@ -13,52 +13,23 @@
 {% block content %}
         
         <section class="cards">
+            {% for item in items %}
+                <div class="card" id="{{item.id}}">
+                    
+                    <div class="card__image-container">
+                        <img src="{{item.logo}}" alt="{{item.id}}">
+                    </div>
 
-            <div class="card" id="starter">
-                
-                <div class="card__image-container">
-                    <img src="/icon-Starter.svg" alt="starter">
-                </div>
+                    <div class="card__content">
+                        <p>{{item.level}}</p>
+                    </div>
 
-                <div class="card__content">
-                    <p>Begginers</p>
+                    <div class="card__info">
+                        <p>{{item.classes}}</p>
+                        <p class="card__price">{{item.price}}</p>
+                    </div>
                 </div>
-
-                <div class="card__info">
-                    <p>20 Classes</p>
-                    <p class="card__price">FREE</p>
-                </div>
-
-            </div>
-
-            <div class="card" id="launchbase">
-                <div class="card__image-container">
-                    <img src="/icon-LaunchBase.svg" alt="launchbase">
-                </div>
-
-                <div class="card__content">
-                    <p>Intermediate</p>
-                </div>
-
-                <div class="card__info">
-                    <p>35 Classes</p>
-                    <p class="card__price">FREE</p>
-                </div>
-
-            </div>
-
-            <div class="card" id="gostack">
-                <div class="card__image-container">
-                    <img src="/icon-GoStack.svg" alt="Go stack">
-                </div>
-                <div class="card__content">
-                    <p>Advanced</p>
-                </div>
-                <div class="card__info">
-                    <p>60 Classes</p>
-                    <p class="card__price">FREE</p>
-                </div>
-            </div>
+            {% endfor %}
 
         </section>
 
