@@ -23,21 +23,34 @@ nunjucks.configure("views", {
 
 //adicionando rotas
 server.get("/", function(req, res) {
-    return res.render("courses", {items: cards})
+    return res.render("courses", {cards: "cards", items: cards})
+})
+
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id;
+    const level = cards.find(function(card){
+        return card.id === id
+    })
+
+    if (!level) {
+        return res.render("not-found")
+    }
+    
+    return res.render("courses", {cards: "hidden", changeRedirect: " active",item: level})
 })
 
 server.get("/about", function(req, res) {
     return res.render("about")
 })
 
-server.get("/homepage", function(req, res) {
-    return res.render("homepage")
+server.get("/rocketseat", function(req, res) {
+    return res.render("rocketseat")
 })
 
 // Página não encontrada
 server.use(function(req, res) {
     res.status(404).render("not-found");
-});
+})
 
 // iniciando o servidor
 server.listen(5000, function () {

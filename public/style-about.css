@@ -47,7 +47,8 @@ li {
 
 .links {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .links a {
@@ -110,11 +111,20 @@ li {
     text-decoration: underline;
 }
 
-#links_footer { 
+#links_header {
+    justify-content: center;
+}
+
+#logo-home img {
+    max-width: 90%
+}
+
+#links_footer {
+    justify-content: center; 
     bottom: 0;
     width: 100%;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     background: rgba(0, 0, 0, 0.1);
 }
 
