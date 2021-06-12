@@ -1,16 +1,27 @@
 {
-  "name": "d",
+  "name": "bootcamp-launchbase-desafios-03",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "data.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElonLima/bootcamp-launchbase-desafios-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElonLima/bootcamp-launchbase-desafios-03/issues"
+  },
+  "homepage": "https://github.com/ElonLima/bootcamp-launchbase-desafios-03#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.7"
   }
 }
