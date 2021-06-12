@@ -2,7 +2,7 @@ module.exports = [
     {
         logo:"/icon-Starter.svg",
         id:"starter",
-        level:"Begginers",
+        level:"Beginners",
         classes:"20 Classes",
         price:"Free"
     },
